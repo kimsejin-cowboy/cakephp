@@ -1,0 +1,33 @@
+=================================================================================
+=	rvmによるmailcatcherインストール方法										=
+=	コマンドが見つからないなどのエラーが出る場合は再ログインを試してください	=
+=	mailcatcherは最新版だとマルチバイト文字を受け取ると落ちるので				=
+=	古いバージョンを入れる														=
+=	そのためにrubyも古いバージョンを入れる										=
+=================================================================================
+
+①ruby-2.0.0をインストール
+　rvm install 2.0.0
+
+②ruby-2.0.0をデフォルトに設定する
+　rvm use ruby-2.0.0 --default
+
+③パスが通ったか確認
+　ruby -v
+
+④mailcatcherと依存するgemをインストールする
+　gem install eventmachine -v 1.0.3
+　gem install mailcatcher -v 0.5.12
+
+⑤mailcatcherにパスが通ったか確認
+　mailcatcher -h
+
+⑥ログアウトしてvagrant reload
+
+⑦メールをテスト送信する
+　cd /var/git/tims/html/tims/app/Console
+　php -q cake.php mail_catcher_trial
+
+⑧ブラウザで確認する
+　http://192.168.33.10:1080
+

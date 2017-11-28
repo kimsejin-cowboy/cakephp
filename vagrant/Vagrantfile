@@ -1,0 +1,114 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "centos64_ja"
+  config.vm.box_url = "centos6.8-64.box"
+  config.vm.hostname = "practice"
+
+  config.vm.network :private_network, ip: "192.168.33.10"
+  #config.vm.synced_folder "../", "/share", :nfs => true
+  config.vm.synced_folder "../", "/share", \
+        create: true, owner: 'vagrant', group: 'vagrant', \
+       #mount_options: ['dmode=777,fmode=666']
+        mount_options: ['dmode=777,fmode=777']
+
+  config.vm.provider :virtualbox do |vb|
+    vb.name = "itunit_practice"
+    vb.gui = true
+    #vb.customize ["modifyvm", :id, "--memory", 1024]
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+    vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+  end
+
+  config.vm.provision :shell, :inline => <<-EOT
+    #
+    # iptables off
+    #
+    /sbin/iptables -F
+    /sbin/service iptables stop
+    /sbin/chkconfig iptables off
+    #
+    # yum repository
+    #
+    yum -y update ca-certificates
+    rpm -ivh http://ftp.riken.jp/Linux/fedora/epel/6/i386/epel-release-6-8.noarch.rpm
+    rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+    #rpm -ivh http://dl.iuscommunity.org/pub/ius/stable/CentOS/6/x86_64/ius-release-1.0-11.ius.centos6.noarch.rpm
+    #yum -y update
+    #
+    # ntp
+    #
+    yum -y install ntp
+    /sbin/service ntpd start
+    /sbin/chkconfig ntpd on
+
+    # httpd
+    yum install -y httpd httpd-devel
+    /bin/cp -f /share/vagrant/httpd.conf /etc/httpd/conf/
+    /bin/cp -f /share/vagrant/dev.conf /etc/httpd/conf.d/
+    /sbin/chkconfig httpd on
+    /sbin/service httpd start
+
+    #
+    # php
+    #
+    yum -y --enablerepo=remi-php55 install php php-cli php-pdo php-mbstring php-mcrypt php-pecl-memcache php-mysql php-devel php-common php-pgsql php-pear php-gd php-xml php-pecl-xdebug php-pecl-apc
+    touch /var/log/php.log && chmod 666 /var/log/php.log
+    cp -a /share/vagrant/php.ini /etc/php.ini
+
+    # mysqld
+    yum -y install mysql-server
+    /sbin/service mysqld restart
+    /sbin/chkconfig mysqld on
+    mysqladmin -u root password 'pmdssw'
+    mysql -u root --password=pmdssw -f --default-character-set=utf8 < /share/vagrant/data/create_database.sql
+
+    #
+    # phpMyAdmin
+    yum install -y --enablerepo=remi-php55 phpMyAdmin
+    /bin/cp -f /share/vagrant/phpMyAdmin.conf /etc/httpd/conf.d/
+
+    /sbin/service httpd restart
+
+	# kill postfix
+	/sbin/chkconfig postfix off
+	/etc/rc.d/init.d/postfix stop
+
+	#
+	# depending packages for mailcatcher
+	#
+	yum -y install gcc-c++ patch readline readline-devel
+	yum -y install zlib zlib-devel libffi-devel
+	yum -y install openssl-devel make bzip2 autoconf automake libtool bison
+	yum -y install gdbm-devel tcl-devel tk-devel
+	yum -y install libxslt-devel libxml2-devel
+	yum -y install --enablerepo=epel libyaml-devel
+	yum -y install sqlite-devel
+	curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
+	curl -L https://get.rvm.io | bash -s stable
+
+	#
+    # Composer
+    #
+    if [ -f /share/composer.json ]; then
+      cd /share && curl -s http://getcomposer.org/installer | php
+      /usr/bin/php /share/composer.phar install
+    fi
+
+    #cp -a /share/app/Config/database.php.default /share/app/Config/database.php
+    #cp -a /share/app/Config/bootstrap.php.default /share/app/Config/bootstrap.php
+    #cp -a /share/app/Config/email.php.default /share/app/Config/email.php
+
+  EOT
+
+	config.vm.provision :shell, run: "always", :inline => <<-EOT
+	    /etc/rc.d/init.d/httpd restart
+		# このブロックはmailcatcherをインストールするまでエラーがでます
+	    mailcatcher --http-ip 192.168.33.10 --smtp-port 587
+
+	EOT
+end

@@ -1,0 +1,182 @@
+@CHARSET "UTF-8";
+table.manage tr:nth-child(even) {
+	background: #f9f9f9;
+}
+ins{
+	text-decoration : none;
+}
+.checkbox{
+	display: inline-block;
+}
+.checkbox input{
+	margin-top: 0.2em;
+}
+
+/* 画面全体調整用 */
+div#content{
+	padding: 60px;
+}
+div#UserManage{
+	margin: 20px 40px;
+}
+div#UserManage a{
+	color: #add6d6;
+	text-decoration : none;
+}
+div#UserManage a:hover{
+	color: #0080ff;
+	text-decoration : none;
+}
+div#PageNavigator{
+	margin-bottom: 20px;
+}
+.wrapper{
+	padding: 50px;
+	display: block;
+	text-align: left;
+	}
+div.center{
+	width: 500px;
+	height: auto;
+	margin: 3px auto;
+	display: block;
+}
+
+div.pagination-link{
+	margin: 20px;
+}
+div.comment-info {
+	margin-top: 10px;
+	padding-top: 20px;
+	border-top: solid 1px #b5cecd;
+}
+
+div.float-left {
+	float : left;
+}
+div.float-right {
+	float :right;
+}
+input.small-form{
+	width: 500px;
+	height: 16px;
+	margin-top: 0;
+}
+a.topic-bar{
+	display : inline-block;
+	padding: 8px;
+	border-left: solid 10px #2c6877;
+}
+
+
+/* ラベル */
+.text-label {
+	width : 120px;
+	height: 20px;
+	font-size : 16px;
+	/* font-weight : bold; */
+	text-decoration : none;
+	display : table-cell;
+	text-align : center;
+	padding : 6px;
+	margin: auto 8px;
+	color : #000;
+	background-color : #fff;
+	border-radius : 5px;
+	border: solid 1px #000;
+}
+.link-label {
+	width : 160px;
+	height: auto;
+	font-size : 16px;
+	font-weight : bold;
+	text-decoration : none;
+	color : #000;
+	text-align : center;
+	padding : 6px;
+	margin: 6px 10px;
+	background-color : #fff;
+	border-radius : 5px;
+	border: solid 1px #000;
+	display : inline-block;
+}
+.link-label:hover{
+	color: #367889;
+	background-color : #eee;
+}
+.link-label:active{
+	color : #0080ff;
+	background-color : #add6d6;
+}
+
+/* モーダル デフォルトでは非表示 */
+.modal-wrapper {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 100;
+	display: none;
+}
+.modal {
+	position: fixed;
+	top: 10%;
+	left: 50%;
+	width: 680px;
+	height: auto;
+	margin-left: -300px;
+	background-color: #fff;
+	padding: 20px;
+	border: solid 1px #000;
+	border-radius: 10px;
+	text-align: left;
+	color: #000;
+	display: block;
+	z-index: 101;
+}
+/* ウィンドウ デフォルトでは非表示 */
+.window-wrapper {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 100;
+	display: none;
+}
+.window {
+	position: fixed;
+	top: 50px;
+	left: 50%;
+	width: 800px;
+	height: 600px;
+	margin-left: -400px;
+	background-color: #fff;
+	padding: 30px;
+	border: solid 1px #000;
+	border-radius: 10px;
+	text-align: left;
+	color: #000;
+	display: block;
+	z-index: 101;
+}
+.window section{
+	top: 0;
+	height: 510px;
+	margin-bottom: 10px;
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
+/* clearfix */
+.clearfix:after { /*floatの解除*/
+	display:block;
+	clear:both;
+	height:0px;
+	visibility:hidden;
+	content:".";
+}
+

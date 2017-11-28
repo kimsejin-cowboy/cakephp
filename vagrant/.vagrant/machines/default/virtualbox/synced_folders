@@ -1,0 +1,1 @@
+{"virtualbox":{"/share":{"create":true,"owner":"vagrant","group":"vagrant","mount_options":["dmode=777,fmode=777","uid=500","gid=10"],"guestpath":"/share","hostpath":"C:/webservice/practice","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/webservice/practice/vagrant","disabled":false,"__vagrantfile":true}}}

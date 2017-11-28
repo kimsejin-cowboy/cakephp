@@ -1,0 +1,320 @@
+2017-04-11 10:41:04 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'tutorial\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /tutorial/
+Stack Trace:
+#0 /share/lib/cakephp-2.3.1/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /share/lib/cakephp-2.3.1/lib/Cake/Model/ConnectionManager.php(102): DboSource->__construct(Array)
+#2 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(3209): ConnectionManager::getDataSource('default')
+#3 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(3231): Model->setSource('postal_codes')
+#5 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(1319): Model->getDataSource()
+#6 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(1402): Model->schema()
+#7 /share/lib/cakephp-2.3.1/lib/Cake/Controller/Component/PaginatorComponent.php(387): Model->hasField('id')
+#8 /share/lib/cakephp-2.3.1/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(PostalCode), Array, Array)
+#9 /share/apps/tutorial/app/Controller/PostalCodesController.php(58): PaginatorComponent->paginate(Object(PostalCode), Array)
+#10 [internal function]: PostalCodesController->search()
+#11 /share/lib/cakephp-2.3.1/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(PostalCodesController), Array)
+#12 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PostalCodesController), Object(CakeRequest), Object(CakeResponse))
+#14 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2017-04-11 10:41:05 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-04-11 10:41:05 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /tutorial/favicon.ico
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-04-11 10:41:31 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'tutorial\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /tutorial/
+Stack Trace:
+#0 /share/lib/cakephp-2.3.1/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /share/lib/cakephp-2.3.1/lib/Cake/Model/ConnectionManager.php(102): DboSource->__construct(Array)
+#2 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(3209): ConnectionManager::getDataSource('default')
+#3 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(3231): Model->setSource('postal_codes')
+#5 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(1319): Model->getDataSource()
+#6 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(1402): Model->schema()
+#7 /share/lib/cakephp-2.3.1/lib/Cake/Controller/Component/PaginatorComponent.php(387): Model->hasField('id')
+#8 /share/lib/cakephp-2.3.1/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(PostalCode), Array, Array)
+#9 /share/apps/tutorial/app/Controller/PostalCodesController.php(58): PaginatorComponent->paginate(Object(PostalCode), Array)
+#10 [internal function]: PostalCodesController->search()
+#11 /share/lib/cakephp-2.3.1/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(PostalCodesController), Array)
+#12 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PostalCodesController), Object(CakeRequest), Object(CakeResponse))
+#14 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2017-04-11 10:41:32 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-04-11 10:46:16 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'tutorial\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /tutorial/
+Stack Trace:
+#0 /share/lib/cakephp-2.3.1/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /share/lib/cakephp-2.3.1/lib/Cake/Model/ConnectionManager.php(102): DboSource->__construct(Array)
+#2 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(3209): ConnectionManager::getDataSource('default')
+#3 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(3231): Model->setSource('postal_codes')
+#5 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(1319): Model->getDataSource()
+#6 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(1402): Model->schema()
+#7 /share/lib/cakephp-2.3.1/lib/Cake/Controller/Component/PaginatorComponent.php(387): Model->hasField('id')
+#8 /share/lib/cakephp-2.3.1/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(PostalCode), Array, Array)
+#9 /share/apps/tutorial/app/Controller/PostalCodesController.php(58): PaginatorComponent->paginate(Object(PostalCode), Array)
+#10 [internal function]: PostalCodesController->search()
+#11 /share/lib/cakephp-2.3.1/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(PostalCodesController), Array)
+#12 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PostalCodesController), Object(CakeRequest), Object(CakeResponse))
+#14 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2017-04-11 10:46:16 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-04-11 10:48:53 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-04-11 10:54:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-04-11 10:55:35 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-04-11 10:55:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-04-11 10:55:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-04-11 10:55:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-22 15:29:09 Error: [MissingActionException] Action AppController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'index',
+)
+Request URL: /apps/tutorial/app/
+Stack Trace:
+#0 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-22 15:29:10 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /apps/tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-22 15:29:11 Error: [MissingActionException] Action AppController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'index',
+)
+Request URL: /apps/tutorial/app/
+Stack Trace:
+#0 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-22 15:29:11 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /apps/tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-22 15:41:54 Error: [MissingActionException] Action AppController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'index',
+)
+Request URL: /apps/tutorial/app/
+Stack Trace:
+#0 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-22 15:41:54 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /apps/tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-22 15:42:20 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /apps/tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-22 15:46:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /apps/tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-22 15:46:48 Error: [MissingControllerException] Controller class SearchController could not be found.
+Exception Attributes: array (
+  'class' => 'SearchController',
+  'plugin' => NULL,
+)
+Request URL: /apps/tutorial/search
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-22 15:46:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /apps/tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-10-22 15:47:02 Error: [MissingActionException] Action AppController::search() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'search',
+)
+Request URL: /apps/tutorial/app/search
+Stack Trace:
+#0 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AppController), Object(CakeRequest), Object(CakeResponse))
+#2 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-10-22 15:47:03 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /apps/tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-28 23:10:25 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [1045] Access denied for user \'tutorial\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /tutorial/
+Stack Trace:
+#0 /share/lib/cakephp-2.3.1/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /share/lib/cakephp-2.3.1/lib/Cake/Model/ConnectionManager.php(102): DboSource->__construct(Array)
+#2 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(3209): ConnectionManager::getDataSource('default')
+#3 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(3231): Model->setSource('postal_codes')
+#5 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(1319): Model->getDataSource()
+#6 /share/lib/cakephp-2.3.1/lib/Cake/Model/Model.php(1402): Model->schema()
+#7 /share/lib/cakephp-2.3.1/lib/Cake/Controller/Component/PaginatorComponent.php(387): Model->hasField('id')
+#8 /share/lib/cakephp-2.3.1/lib/Cake/Controller/Component/PaginatorComponent.php(142): PaginatorComponent->validateSort(Object(PostalCode), Array, Array)
+#9 /share/apps/tutorial/app/Controller/PostalCodesController.php(58): PaginatorComponent->paginate(Object(PostalCode), Array)
+#10 [internal function]: PostalCodesController->search()
+#11 /share/lib/cakephp-2.3.1/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(PostalCodesController), Array)
+#12 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#13 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PostalCodesController), Object(CakeRequest), Object(CakeResponse))
+#14 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2017-11-28 23:10:25 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /tutorial/favicon.ico
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-28 23:10:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

@@ -1,0 +1,14 @@
+@CHARSET "utf8";
+
+a.link-button {
+    width : 100px;
+    font-size : 12px;
+    /* font-weight : bold; */
+    text-decoration : none;
+    display : block;
+    text-align : center;
+    padding : 4px 0 5px;
+    color : #fff;
+    background-color : #49a9d4;
+    border-radius : 5px;
+}
