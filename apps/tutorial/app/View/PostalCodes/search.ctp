@@ -6,7 +6,7 @@
     array('type' => 'get',
         'url' => array(
             'controller' => 'postal_codes',
-            'action'     => 'search'
+            'action'     => 'add'
         )
     )
 );

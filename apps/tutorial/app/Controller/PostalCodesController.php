@@ -75,42 +75,23 @@ class PostalCodesController extends AppController {
      * ・成功したら検索画面にリダイレクトしてください
      */
     public function add() {
-
+    	$this->set("title_for_layout","はじめてのCakePHP");
+    	$this->set("message","なんらかの文字");
     	//$conditions = array();
     	if (!empty($this->data)){
     		$this->PostalCode->save($this->data);
+    		$this->Session->setFlash('入力完了');
+    		$this->redirect(array('action'=>'add'));
+
     	}
 
-    	// TODO 検索条件を構築
-    	// example
-    	$conditions = array();
-    	// TODO 検索条件を構築
-    	// example
-    	if ($this->request->query('prefecture_id')) {
-    		// 検索条件に追加
-    		$conditions['prefecture_id'] = $this->request->query('prefecture_id');
-    		// 検索フォームに反映
-    		$this->request->data['PostalCode']['prefecture_id'] = $this->request->query('prefecture_id');
-    	}
+
     	// ページネータの設定
-    	$this->Paginator->settings = array(
-    			'limit' => 10,
-    			'order' => array('PostalCode.id' => 'ASC'),
-    			'fields' => array(
-    					'Prefecture.prefecture_name', 'PostalCode.id',
-    					'PostalCode.postal_code', 'PostalCode.city_name',
-    					'PostalCode.address'
-    			)
-    	);
+
     	// 検索
-    	$postalCodes = $this->Paginator->paginate($this->PostalCode, $conditions);
 
-    	// 検索結果をviewにセット
-    	$this->set('postalCodes', $postalCodes);
 
-    	// 検索用パラメータ
-    	$prefectureList = $this->Prefecture->getPrefectureList(null, true);
-    	$this->set('prefectureList', $prefectureList);
+
 
     }
 
