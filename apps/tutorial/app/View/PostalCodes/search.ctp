@@ -9,13 +9,13 @@
             'action'     => 'search'
         )
     )
-); 
+);
 ?>
-<?php $this->Form->inputDefaults(array('div' => false, 'label' => false, 'required' => false)); ?>
+<?php $this->Form->inputDefaults(array('div' => false, 'label' => false, 'required' => false, 'required' => 'addRecord')); ?>
 
     <table>
         <tr>
-            <td>都道府県</td>
+            <td>都道府県!!</td>
             <td>
             <?php echo $this->Form->input('prefecture_id',
                 array(
@@ -27,7 +27,7 @@
         </tr>
     </table>
 
-<?php echo $this->Form->submit('検索', array('div' => false, 'label' => false,'name' => 'search')); ?>
+<?php echo $this->Form->submit('追加', array('div' => false, 'label' => false,'name' => 'search')); ?>
 <?php echo $this->Form->end(); ?>
 
 </div>

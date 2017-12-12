@@ -4320,3 +4320,12 @@ Stack Trace:
 #14 /share/lib/cakephp-2.3.1/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(TopsController), Object(CakeRequest), Object(CakeResponse))
 #15 /share/apps/board/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #16 {main}
+2017-12-10 14:08:04 Error: [MissingControllerException] Controller class Favicon.icoController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.icoController',
+  'plugin' => NULL,
+)
+Request URL: /board/favicon.ico
+Stack Trace:
+#0 /share/apps/board/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
