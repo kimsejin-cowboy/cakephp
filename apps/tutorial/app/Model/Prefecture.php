@@ -6,7 +6,7 @@
  * @property PostalCode $PostalCode
  */
 class Prefecture extends AppModel {
-    
+
     public $name = 'Prefecture';
     public $useTable = 'prefectures';
     /* Prefecture belongs to Region */
@@ -47,7 +47,7 @@ class Prefecture extends AppModel {
         $this->unbindModel(array('hasMany' => array('PostalCode')));
         return $this->find('list', $options);
     }
-    
+
     /**
      * 都道府県名から取得
      * @param string $prefectureName

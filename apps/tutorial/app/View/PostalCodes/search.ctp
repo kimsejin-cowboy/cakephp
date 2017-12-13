@@ -17,12 +17,7 @@
         <tr>
             <td>都道府県!!</td>
             <td>
-            <?php echo $this->Form->input('prefecture_id',
-                array(
-                    'type' => 'select',
-                    'options' => $prefectureList
-                )
-            ); ?>
+          <?php echo $this->Form->input ( 'prefectures' );?>
             </td>
         </tr>
     </table>

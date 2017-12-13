@@ -75,15 +75,17 @@ class PostalCodesController extends AppController {
      * ・成功したら検索画面にリダイレクトしてください
      */
     public function add() {
-    	$this->set("title_for_layout","はじめてのCakePHP");
-    	$this->set("message","なんらかの文字");
+
     	//$conditions = array();
     	if (!empty($this->data)){
     		$this->PostalCode->save($this->data);
     		$this->Session->setFlash('入力完了');
     		$this->redirect(array('action'=>'add'));
-
     	}
+
+    	$this->set('prefectures',$this->Prefecture->find('list',array(
+    			'fields' => array( 'prefecture_name')
+    	)));
 
 
     	// ページネータの設定

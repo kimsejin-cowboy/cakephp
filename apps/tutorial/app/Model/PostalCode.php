@@ -5,7 +5,7 @@
  * @property Prefecture $Prefecture
  */
 class PostalCode extends AppModel {
-    
+
     public $name = 'PostalCode';
     public $useTable = 'postal_codes';
     /* validation settings */
@@ -25,7 +25,7 @@ class PostalCode extends AppModel {
             )
         )
     );
-    
+
     /* PostalCode belongs to Prefecture */
     public $belongsTo = array(
         'Prefecture' => array(
