@@ -2792,3 +2792,12 @@ Request URL: /tutorial/js/jquery.ui.js
 Stack Trace:
 #0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2017-12-15 00:57:18 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /tutorial/js/jquery.ui.js
+Stack Trace:
+#0 /share/apps/tutorial/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
