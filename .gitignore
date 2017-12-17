@@ -2,5 +2,5 @@
 /.settings
 /.buildpath
 /.project
-apps/tutorial/app/tmp/
+apps/tutorial/app/tmp
 /vagrant/.vagrant

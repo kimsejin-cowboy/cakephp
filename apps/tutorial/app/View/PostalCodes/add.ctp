@@ -8,8 +8,8 @@
 
 ?>
 <?php
-echo $this->Form->create ( 'PostalCode' ); // create('モデル名',array(その他))
-//echo $this->Form->input ( 'prefectures_id' ); // input('カラム名',array(その他))
+echo $this->Form->create ( 'PostalCode', array('novalidate' => true)); // create('モデル名',array(その他))
+echo $this->Form->input ( 'local_goverment_code'); // input('カラム名',array(その他))
 echo $this->Form->input ( 'postal_code' );
 echo $this->Form->input ( 'prefecture_id' );
 echo $this->Form->input ( 'city_name' );
