@@ -80,7 +80,7 @@ class PostalCodesController extends AppController {
     	if (!empty($this->data)){
     		$this->PostalCode->save($this->data);
     		$this->Session->setFlash('入力完了');
-    		//$this->redirect(array('action'=>'search'));
+    		$this->redirect(array('action'=>'add'));
     	}
 
     	$this->set('prefectures',$this->Prefecture->find('list',array(

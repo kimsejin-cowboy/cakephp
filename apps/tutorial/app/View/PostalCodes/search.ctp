@@ -55,7 +55,6 @@
                     array('class' => 'link-button')
                 ); ?></td>
                 <td><?php echo $p['Prefecture']['prefecture_name']; ?></td>
-
                 <td><?php echo $p['PostalCode']['postal_code']; ?></td>
                 <td><?php echo $p['PostalCode']['city_name']; ?></td>
                 <td><?php echo $p['PostalCode']['address']; ?></td>
