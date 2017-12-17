@@ -19,18 +19,45 @@ class PostalCode extends AppModel {
 	 * 町域名　………………　漢字（五十音順に掲載）　（注1,2）
 	 */
 	public $validate = array(
+					'local_goverment_code' => array(
+							'alphanumeric' => array(
+									'rule' => 'numeric',
+									'message' => '数字を入力してください。'
+							),
+							'between' => array(
+									'rule' => array('between', 5, 5),
+									'message' => '5文字にしてください'
+							),
+							'rule0' => array(
+									'rule'=> 'notEmpty',
+									'message'=>'必須です！！'
+							)
 
+
+					),
+					'postal_code' => array(
+							'alphanumeric' => array(
+									'rule' => 'numeric',
+									'message' => '数字を入力してください。'
+							),
+							'between7' => array(
+									'rule' => array('between', 7, 7),
+									'message' => '7文字にしてください'
+							)
+					)
+
+
+/*
 			'local_goverment_code' => array(
 					'rule0' => array(
 							'rule'=> 'notEmpty',
-							'message'=>'必須です！！',
-							'allowEmpty' => false
+							'message'=>'必須です！！'
 					),
-					'between' => array(
-							'rule' => array('lengthBetween', 5, 15),
+					'numelic' => array(
+							'rule' => 'numelic',
 							'message' => '5～15文字です'
 					)
-			)
+			)*/
 	);//isHalfLetter
 
 	/* PostalCode belongs to Prefecture */

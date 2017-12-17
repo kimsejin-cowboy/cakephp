@@ -78,9 +78,19 @@ class PostalCodesController extends AppController {
 
     	//$conditions = array();
     	if (!empty($this->data)){
-    		$this->PostalCode->save($this->data);
-    		$this->Session->setFlash('入力完了');
-    		$this->redirect(array('action'=>'add'));
+    		//$this->data['Hoge']['Moge'] = '何かの値';
+    		$int =substr($this->data['PostalCode']['postal_code'], 0, 5);
+    		$this->PostalCode->set('old_postal_code', $int);
+
+
+    		//$data['PostalCode']['old_postal_code'] = substr($data['PostalCode']['postal_code'], 0, 5);
+    		if($this->PostalCode->save($this->data)){
+    			$this->redirect(array('action'=>'search'));
+    		}
+
+
+    		//$this->Session->setFlash('入力完了');
+    		//$this->redirect(array('action'=>'add'));
     	}
 
     	$this->set('prefectures',$this->Prefecture->find('list',array(
