@@ -110,11 +110,18 @@ class PostalCodesController extends AppController {
      * @param string $postalCodeId
      */
     public function edit($postalCodeId = null) {
-    	if($this->request->is('post') || $this->request->is('put')) {
+
 	    	$this->PostalCode->id = $postalCodeId;
 	    	$this->request->data = $this->PostalCode->read(null,$postalCodeId);
-	    	$this->PostalCode->save($this->request->data);
-    	}
+	    	//$this->PostalCode->save($this->request->data);
+
+	    	if ($this->request->is('post') or $this->request->is('put')) {
+	    		$this->PostalCode->id = $postalCodeId;
+	    		if ($this->PostalCode->save($this->request->data)) {
+	    			$this->redirect(array('action'=>'search'));
+	    			//return $this->redirect(array('action' => 'index'));
+	    		}
+	    	}
 	    	//if($this->PostalCode->save($this->data)){
 	    	//	$this->redirect(array('action'=>'search'));
 	    	//}

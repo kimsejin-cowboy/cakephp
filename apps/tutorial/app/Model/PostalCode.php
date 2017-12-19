@@ -26,8 +26,8 @@ class PostalCode extends AppModel {
 									'message' => '数字を入力してください。'
 							),
 							'between' => array(
-									'rule' => array('between', 5, 5),
-									'message' => '5文字にしてください'
+									'rule' => array('between', 4, 4),
+									'message' => '4文字にしてください'
 							),
 							'rule0' => array(
 									'rule'=> 'notEmpty',
