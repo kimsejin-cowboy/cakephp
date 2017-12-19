@@ -18,6 +18,7 @@ class PostalCode extends AppModel {
 	 * 市区町村名　…………　漢字（コード順に掲載）　（注1,2）
 	 * 町域名　………………　漢字（五十音順に掲載）　（注1,2）
 	 */
+
 	public $validate = array(
 					'local_goverment_code' => array(
 							'alphanumeric' => array(

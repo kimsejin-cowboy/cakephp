@@ -84,10 +84,6 @@ class PostalCodesController extends AppController {
     		if($this->PostalCode->save($this->data)){
     			$this->redirect(array('action'=>'search'));
     		}
-
-
-    		//$this->Session->setFlash('入力完了');
-    		//$this->redirect(array('action'=>'add'));
     	}
 
     	$this->set('prefectures',$this->Prefecture->find('list',array(
@@ -114,10 +110,23 @@ class PostalCodesController extends AppController {
      * @param string $postalCodeId
      */
     public function edit($postalCodeId = null) {
+    	if($this->request->is('post') || $this->request->is('put')) {
+	    	$this->PostalCode->id = $postalCodeId;
+	    	$this->request->data = $this->PostalCode->read(null,$postalCodeId);
+	    	$this->PostalCode->save($this->request->data);
+    	}
+	    	//if($this->PostalCode->save($this->data)){
+	    	//	$this->redirect(array('action'=>'search'));
+	    	//}
 
+
+
+    	$this->set('prefectures',$this->Prefecture->find('list',array(
+    			'fields' => array( 'prefecture_name')
+    	)));
     }
 
-    /**
+        /**
      * 6/6-7 TODO
      * データを削除する機能装して下さい
      * 必ずPOSTメソッドで削除対象のデータのidを取得してください
